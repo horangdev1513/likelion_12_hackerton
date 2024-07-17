@@ -7,6 +7,7 @@ import SignUpPage from '../../pages/signup/SignUp';
 import MyPage from '../../pages/mypage/MyPage';
 import PostList from '../../pages/postlist/PostList';
 import PostWriting from '../../pages/postwriting/PostWriting';
+import MainPage from '../../pages/main/Main';
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: 'postlist',
         element: <PostList />,
+      },
+      {
+        path: 'main',
+        element: <MainPage />,
       },
     ],
   },

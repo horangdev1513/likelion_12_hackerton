@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
+import { MainLayout } from './styles';
 
 import Header from './Header';
 import Container from './Container';
@@ -9,7 +10,9 @@ export default function Layout() {
   if (location.pathname === '/') {
     return (
       <Container>
-        <Outlet />
+        <MainLayout>
+          <Outlet />
+        </MainLayout>
       </Container>
     );
   }
@@ -17,7 +20,9 @@ export default function Layout() {
   return (
     <Container>
       <Header title="임시" />
-      <Outlet />
+      <MainLayout>
+        <Outlet />
+      </MainLayout>
     </Container>
   );
 }
