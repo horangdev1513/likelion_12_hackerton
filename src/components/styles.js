@@ -22,6 +22,10 @@ export const ContainerLayout = styled.div`
 export const MainLayout = styled.main`
   width: 100%;
   padding: 0 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 // Header.jsx
