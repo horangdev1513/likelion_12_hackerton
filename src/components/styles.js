@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // Container.jsx
 
@@ -55,4 +56,26 @@ export const HeaderLayout = styled.header`
 export const HeaderTitle = styled.h1`
   font-size: 20px;
   font-weight: 800;
+`;
+
+// Button.jsx
+
+export const StyleLink = styled(Link)`
+  width: ${({ $width }) => $width + '%'};
+  height: ${({ $height }) => $height + 'px'};
+  margin-top: 30px;
+`;
+
+export const StyledButton = styled.button`
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: ${({ theme }) => theme.color.main};
+  color: white;
+
+  & p {
+    font-size: ${({ theme }) => theme.fontSize.l};
+    font-weight: ${({ theme }) => theme.fontWeight.xl};
+  }
 `;
