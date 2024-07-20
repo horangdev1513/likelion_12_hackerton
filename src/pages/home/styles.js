@@ -1,6 +1,12 @@
 import { Swiper } from 'swiper/react';
 import styled from 'styled-components';
 
+// Home.jsx
+
+export const HomeButtonBox = styled.div`
+  width: 100%;
+  margin-top: 40px;
+`;
 // Swiper.jsx
 
 export const StyledSwiper = styled(Swiper)`

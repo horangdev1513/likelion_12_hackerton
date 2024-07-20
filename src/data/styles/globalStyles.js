@@ -30,4 +30,12 @@ export const GlobalStyle = createGlobalStyle`
     display: none;
   }
 
+  a {
+
+  text-decoration: none;
+
+  color: #222;
+
+}
+
 `;

@@ -1,11 +1,9 @@
-import { StyleLink, StyledButton } from './styles';
+import { StyledButton } from './styles';
 
-export default function Button({ text, link, width, height }) {
+export function LargeButton({ text, ...props }) {
   return (
-    <StyleLink to={link} $height={height} $width={width}>
-      <StyledButton>
-        <p>{text}</p>
-      </StyledButton>
-    </StyleLink>
+    <StyledButton {...props}>
+      <p>{text}</p>
+    </StyledButton>
   );
 }

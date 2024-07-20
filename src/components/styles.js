@@ -60,15 +60,9 @@ export const HeaderTitle = styled.h1`
 
 // Button.jsx
 
-export const StyleLink = styled(Link)`
-  width: ${({ $width }) => $width + '%'};
-  height: ${({ $height }) => $height + 'px'};
-  margin-top: 30px;
-`;
-
 export const StyledButton = styled.button`
   width: 100%;
-  height: 100%;
+  height: 60px;
   border: none;
   border-radius: 15px;
   background-color: ${({ theme }) => theme.color.main};
@@ -78,4 +72,29 @@ export const StyledButton = styled.button`
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: ${({ theme }) => theme.fontWeight.xl};
   }
+`;
+
+// Input.jsx
+
+export const InputLayout = styled.div`
+  width: 100%;
+  height: 60px;
+
+  margin-bottom: 30px;
+
+  & .label-box {
+    margin: 3px;
+  }
+
+  & .label-text {
+    font-size: ${({ theme }) => theme.fontSize.m};
+    font-weight: ${({ theme }) => theme.fontWeight.l};
+  }
+`;
+
+export const StyledInput = styled.input`
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
 `;
