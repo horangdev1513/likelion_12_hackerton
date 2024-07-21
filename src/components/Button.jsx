@@ -1,9 +1,17 @@
-import { StyledButton } from './styles';
+import { StyledLargeButton, StyledSmallButton } from './styles';
 
 export function LargeButton({ text, ...props }) {
   return (
-    <StyledButton {...props}>
+    <StyledLargeButton {...props}>
       <p>{text}</p>
-    </StyledButton>
+    </StyledLargeButton>
+  );
+}
+
+export function SmallButton({ text, ...props }) {
+  return (
+    <StyledSmallButton {...props}>
+      <p>{text}</p>
+    </StyledSmallButton>
   );
 }

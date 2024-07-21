@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FormLayout = styled.div`
   width: 100%;
 
-  margin-top: 100px;
+  margin-top: 50px;
 
   & .buttonbox {
     margin-top: 50px;

@@ -71,7 +71,7 @@ export default function Form() {
           />
 
           <div className="buttonbox">
-            <LargeButton text="로그인" onClick={submitHandler} />
+            <LargeButton text="회원가입" onClick={submitHandler} />
           </div>
         </form>
       </FormLayout>

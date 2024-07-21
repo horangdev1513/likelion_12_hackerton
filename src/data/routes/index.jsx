@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
         element: <MyPage />,
       },
       {
-        path: 'postwriting',
+        path: 'createpost',
         element: <PostWriting />,
       },
       {

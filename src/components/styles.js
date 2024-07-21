@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 // Container.jsx
 
@@ -60,7 +59,7 @@ export const HeaderTitle = styled.h1`
 
 // Button.jsx
 
-export const StyledButton = styled.button`
+export const StyledLargeButton = styled.button`
   width: 100%;
   height: 60px;
   border: none;
@@ -71,6 +70,15 @@ export const StyledButton = styled.button`
   & p {
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: ${({ theme }) => theme.fontWeight.xl};
+  }
+`;
+
+export const StyledSmallButton = styled(StyledLargeButton)`
+  width: 30%;
+  height: 40px;
+
+  & p {
+    font-size: ${({ theme }) => theme.fontSize.m};
   }
 `;
 
