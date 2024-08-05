@@ -55,7 +55,7 @@ const HeaderBox = styled.div`
 
 const ContentBox = styled.div`
   padding: 10px 15px;
-  height: 70%;
+  height: 62%;
 
   overflow: hidden;
   white-space: normal;
