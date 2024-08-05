@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const FormLayout = styled.div`
   width: 100%;
 
-  margin-top: 100px;
+  margin-top: 10%;
 
   & .buttonbox {
     margin-top: 50px;
@@ -17,6 +17,7 @@ export const LoginSignupParagraph = styled.p`
   margin-top: 20px;
   font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: ${({ theme }) => theme.fontWeight.l};
+  font-family: NanumSquareRound;
 
   & .signup {
     margin-left: 10px;

@@ -1,8 +1,24 @@
 import { useState } from 'react';
 
-/**
- * 인풋 검증 훅
- * 일단 임시로 작성 후 백엔드랑 협의 해서 로직 추가
- */
+export function useInput(value, validationFn) {
+  const [enteredValue, setEnteredValue] = useState(value);
+  const [didEdit, setDidEdit] = useState(false);
 
-export function useInput(text) {}
+  const valueIsValid = validationFn(enteredValue);
+
+  function inputHandler(e) {
+    setEnteredValue(e.target.value);
+    setDidEdit(false);
+  }
+
+  function blurHandler() {
+    setDidEdit(true);
+  }
+
+  return {
+    value: enteredValue,
+    inputHandler,
+    blurHandler,
+    hasError: didEdit && !valueIsValid,
+  };
+}

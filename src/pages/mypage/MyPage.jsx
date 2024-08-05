@@ -1,3 +1,9 @@
-export default function MyPage() {
-  return <></>;
+import UserInformation from './MyPageUserInformation';
+
+export function MyPage() {
+  return (
+    <>
+      <UserInformation />
+    </>
+  );
 }

@@ -1,7 +1,7 @@
-import SwiperSection from './Swiper';
 import { useNavigate } from 'react-router-dom';
 
-import { LargeButton } from '../../components/Button';
+import { LargeButton } from '../../components/buttons';
+import SwiperSection from './Swiper';
 import { HomeButtonBox } from './styles';
 
 export default function HomePage() {
@@ -10,6 +10,7 @@ export default function HomePage() {
   function navHandler() {
     navigate('/login');
   }
+
   return (
     <>
       <SwiperSection />

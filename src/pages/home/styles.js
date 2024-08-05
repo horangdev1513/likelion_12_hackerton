@@ -44,6 +44,7 @@ export const StyledSwiper = styled(Swiper)`
     margin-bottom: 20px;
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: ${({ theme }) => theme.fontWeight.xl};
+    font-family: NanumSquareRound;
   }
 
   & .content {
@@ -51,5 +52,6 @@ export const StyledSwiper = styled(Swiper)`
     margin-bottom: 5px;
     font-size: ${({ theme }) => theme.fontSize.s};
     font-weight: ${({ theme }) => theme.fontWeight.xs};
+    font-family: NanumSquareRound;
   }
 `;

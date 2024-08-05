@@ -8,6 +8,7 @@ export const ContainerLayout = styled.div`
 
   width: 100%;
   height: 100vh;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@ export const ContainerLayout = styled.div`
 
 export const MainLayout = styled.main`
   width: 100%;
+  height: 100%;
   padding: 0 24px;
 
   display: flex;
@@ -32,7 +34,7 @@ export const MainLayout = styled.main`
 
 export const HeaderLayout = styled.header`
   width: 100%;
-  height: 10vh;
+  height: 10%;
 
   display: flex;
   align-items: center;
@@ -86,8 +88,7 @@ export const StyledSmallButton = styled(StyledLargeButton)`
 
 export const InputLayout = styled.div`
   width: 100%;
-  height: 60px;
-
+  height: 75px;
   margin-bottom: 30px;
 
   & .label-box {
@@ -98,11 +99,22 @@ export const InputLayout = styled.div`
     font-size: ${({ theme }) => theme.fontSize.m};
     font-weight: ${({ theme }) => theme.fontWeight.l};
   }
+
+  & .error-box {
+    margin: 10px 0;
+  }
+
+  & .error-message {
+    margin-top: 5px;
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    font-weight: ${({ theme }) => theme.fontWeight.l};
+    color: red;
+  }
 `;
 
 export const StyledInput = styled.input`
   width: 100%;
-  height: 100%;
+  height: 60px;
   border-radius: 10px;
   border: none;
 `;
