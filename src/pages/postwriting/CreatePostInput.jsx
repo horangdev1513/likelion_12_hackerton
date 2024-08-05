@@ -32,6 +32,8 @@ export default function CreatePostInput() {
   async function submitHandler(e) {
     e.preventDefault();
 
+    if (!isNotEmpty(postValue)) return;
+
     setIsLoadging(true);
     try {
       const createPostResponse = await authHttp.post('/posts', {
@@ -67,6 +69,7 @@ export default function CreatePostInput() {
           placeholder="오늘은 어땠나요? 글을 작성해주세요 (300글자)"
         />
         <p className="text-length">{postValue.length} / 300</p>
+        {hasError && <p className="warning-message">입력창에 글을 입력해주세요</p>}
       </Layout>
       <ButtonBox>
         {!isLoading ? <LargeButton text="글쓰기" onClick={submitHandler} /> : <LargeLoadingButton />}
@@ -80,9 +83,15 @@ const Layout = styled.div`
   height: 40%;
 
   background-color: white;
+  font-family: NanumSquareRound;
 
   & .text-length {
     text-align: right;
+    font-size: ${({ theme }) => theme.fontSize.s};
+  }
+
+  & .warning-message {
+    font-size: ${({ theme }) => theme.fontSize.s};
   }
 
   display: flex;

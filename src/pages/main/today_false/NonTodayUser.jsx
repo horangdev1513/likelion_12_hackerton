@@ -17,6 +17,7 @@ import annoyance_on from '../../../assets/main/emotion_on/annoyance.png';
 import anxiety_on from '../../../assets/main/emotion_on/anxiety.png';
 import calmness_on from '../../../assets/main/emotion_on/calmness.png';
 import depression_on from '../../../assets/main/emotion_on/depression.png';
+import AnimatedText from './AnimatedText';
 
 export default function NonTodayUser() {
   const userNicKName = useAtomValue(readUserNickName);
@@ -34,9 +35,12 @@ export default function NonTodayUser() {
       <UserData>
         안녕하세요, <span className="user-name">{userNicKName}</span> 님!
       </UserData>
+
+      <div className="animation-text-box">
+        <AnimatedText text="오늘 하루는 어땠나요? 말 못 할 일들이 많았나요? 오늘 나의 감정을 다른 사람들과 공유해보는 건 어떨까요? 쌓여있는 감정들을 글로 표현해보세요." />
+      </div>
       <StyledForm onSubmit={writeButtonHandler}>
-        <p className="subject-select">먼저 오늘의 글감을 선택하세요.</p>
-        <div className="subject-box">
+        {/* <div className="subject-box">
           <StyledInput id="새싹" type="radio" value="새싹" name="subject" defaultChecked />
           <label htmlFor="새싹">
             <p>새싹</p>
@@ -45,8 +49,9 @@ export default function NonTodayUser() {
           <label htmlFor="테스트">테스트</label>
           <StyledInput id="테스트1" type="radio" value="테스트" name="subject" />
           <label htmlFor="테스트1">테스트1</label>
-        </div>
-        <p className="subject-select">먼저 오늘의 글감을 선택하세요.</p>
+        </div> */}
+
+        <p className="subject-select">먼저 오늘의 감정을 선택하세요.</p>
         <div className="emotion-box">
           <StyledInput id="happy" type="radio" value="happy" name="emotion" defaultChecked />
           <label htmlFor="happy">
@@ -86,6 +91,10 @@ const Layout = styled.div`
   width: 100%;
   margin-top: 20px;
   font-family: NanumSquareRound;
+
+  & .animation-text-box {
+    margin: 10% 0;
+  }
 `;
 
 const UserData = styled.p`

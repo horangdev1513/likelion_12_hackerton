@@ -57,15 +57,15 @@ export default function Form() {
       <FormLayout>
         <form>
           <Input
-            text="이메일"
-            id="email"
-            type="email"
-            name="email"
-            placeholder="이메일을 입력해주세요"
+            text="아이디"
+            id="id"
+            type="text"
+            name="id"
+            placeholder="아이디를 입력해주세요(3-10글자)"
             onChange={emailInputHanlder}
             onBlur={emailBlurHandler}
             value={emailValue}
-            error={emailHasError && '잘못된 이메일 형식입니다.'}
+            error={emailHasError && '잘못된 아이디 형식입니다.'}
           />
           <Input
             text="비밀번호"
@@ -95,7 +95,7 @@ export default function Form() {
             id="profile"
             type="text"
             name="profile"
-            placeholder="사용할 이름을 입력해주세요(2-5글자)"
+            placeholder="사용할 이름을 입력해주세요(3-6글자)"
             onChange={nickNameValueInputHandler}
             onBlur={nickNameValueBlurHandler}
             value={nickNameValue}

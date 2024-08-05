@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/query-core": "^5.51.21",
     "axios": "^1.7.2",
+    "framer-motion": "^11.3.21",
     "immer": "^10.1.1",
     "jotai": "^2.9.1",
     "jotai-immer": "^0.4.1",

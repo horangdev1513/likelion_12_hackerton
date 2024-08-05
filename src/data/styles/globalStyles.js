@@ -42,11 +42,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-
   text-decoration: none;
-
   color: #222;
+  }
 
-}
+  button {
+    -webkit-appearance: none;
+  }
 
 `;

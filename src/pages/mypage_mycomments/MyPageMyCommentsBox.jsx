@@ -12,7 +12,7 @@ export default function MyCommentsBox({ comment, id, onDeleteSuccess }) {
   return (
     <Layout>
       <div className="comment-box">
-        <p>{comment}</p>
+        <p className="comment">{comment}</p>
       </div>
 
       <div className="button-box">
@@ -41,8 +41,11 @@ const Layout = styled.div`
 
   border-bottom: 1px solid;
 
+  font-family: NanumSquareRound;
+
   & .comment-box {
     width: 60%;
+
     overflow: hidden;
     height: 16px;
     white-space: normal;
@@ -51,6 +54,10 @@ const Layout = styled.div`
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     word-break: keep-all;
+
+    & .comment {
+      font-family: NanumSquareRound;
+    }
   }
 
   & .button-box {
