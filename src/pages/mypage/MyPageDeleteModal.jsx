@@ -18,10 +18,8 @@ const MyPageDeleteModal = forwardRef(function MyPageDeleteModal(prop, ref) {
     try {
       const res = await authHttp.delete(`/members/${userId}`);
 
-      if (res.response.status === 200) {
-        logout();
-        navigate(LOGIN_PAGE);
-      }
+      logout();
+      navigate(LOGIN_PAGE);
     } catch (err) {
       setError('회원 탈퇴에 실패했습니다.');
     } finally {
