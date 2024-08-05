@@ -11,7 +11,7 @@ export default function TodayHotPostLayout({ children }) {
       <div className="link-box">
         <Title text="오늘의 최신글" />
         <Link to={POST_LISTS_PAGE} className="link">
-          다른 글아보기 <span>{'>'}</span>
+          다른 글 모아보기 <span>{'>'}</span>
         </Link>
       </div>
       {children}

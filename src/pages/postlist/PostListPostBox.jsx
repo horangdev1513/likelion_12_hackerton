@@ -56,4 +56,12 @@ const HeaderBox = styled.div`
 const ContentBox = styled.div`
   padding: 10px 15px;
   height: 70%;
+
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-break: keep-all;
 `;
