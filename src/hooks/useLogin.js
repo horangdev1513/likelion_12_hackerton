@@ -30,6 +30,7 @@ export function useLogin(firstValidation, secondValidation, loginData) {
     try {
       const { data } = await instance.post('/members/login', loginData);
       sessionStorage.setItem('token', data.token);
+
       userDataHandler({
         today: data.member.today,
         nickname: data.member.nickname,
