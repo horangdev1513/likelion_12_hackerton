@@ -1,7 +1,9 @@
-export default function MyPage() {
+import UserInformation from './MyPageUserInformation';
+
+export function MyPage() {
   return (
     <>
-      <h1>My Page 여기에 작성</h1>
+      <UserInformation />
     </>
   );
 }

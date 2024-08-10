@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export default function Container({ children }) {
-  return <Layout>{children}</Layout>;
+  return <ContainerLayout>{children}</ContainerLayout>;
 }
 
-const Layout = styled.div`
+const ContainerLayout = styled.div`
   max-width: 480px;
   margin: 0 auto;
 
   width: 100%;
   height: 100vh;
+  position: relative;
 
   display: flex;
   flex-direction: column;

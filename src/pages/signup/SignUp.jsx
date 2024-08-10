@@ -1,7 +1,12 @@
+import { SuccessModal, WarningModal } from '../../components/modal';
+import Form from './SignUpForm';
+
 export default function SignUpPage() {
   return (
     <>
-      <h1>SignUp 여기에 작성</h1>
+      <SuccessModal />
+      <WarningModal />
+      <Form />
     </>
   );
 }

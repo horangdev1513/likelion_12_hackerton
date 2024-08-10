@@ -1,7 +1,22 @@
+import { useNavigate } from 'react-router-dom';
+
+import { LargeButton } from '../../components/buttons';
+import SwiperSection from './Swiper';
+import { HomeButtonBox } from './styles';
+
 export default function HomePage() {
+  const navigate = useNavigate();
+
+  function navHandler() {
+    navigate('/login');
+  }
+
   return (
     <>
-      <h1>HomePage 여기에 작성</h1>
+      <SwiperSection />
+      <HomeButtonBox>
+        <LargeButton text="시작하기" onClick={navHandler} />
+      </HomeButtonBox>
     </>
   );
 }

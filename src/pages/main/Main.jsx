@@ -1,7 +1,10 @@
+import { NonTodayUser } from './today_false';
+import { TodayUser } from './today_true';
+import { useAtomValue } from 'jotai';
+import { readUserToday } from '../../atoms';
+
 export default function MainPage() {
-  return (
-    <>
-      <h1>MainPage 여기에 작성</h1>
-    </>
-  );
+  const userTodayValue = useAtomValue(readUserToday);
+
+  return <>{userTodayValue ? <TodayUser /> : <NonTodayUser />}</>;
 }
