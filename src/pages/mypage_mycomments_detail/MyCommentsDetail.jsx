@@ -24,7 +24,9 @@ export function MyCommentsDetail() {
     try {
       await dataFatch(`comments/update/${param.id}`, param.id, comment, fetchedData?.nickname);
       navigate(-1);
-    } catch (error) {}
+    } catch (error) {
+      
+    }
   };
 
   return (

@@ -31,3 +31,5 @@ export const commentMutationAtom = atomWithMutation(get => ({
     queryClient.invalidateQueries(['comment', get(commentIdAtom)]);
   },
 }));
+
+

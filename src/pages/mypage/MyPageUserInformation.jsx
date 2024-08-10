@@ -14,12 +14,19 @@ import { LOGIN_PAGE } from '../../data/constants';
 import { useAtomValue } from 'jotai';
 import { readUserNickName } from '../../atoms';
 import MyPageDeleteModal from './MyPageDeleteModal';
+import MyPagePwdChangeModal from './MyPagePwdChangeModal';
 
 export default function UserInformation() {
   const dialog = useRef(null);
+  const pwdDialog = useRef(null);
+
   const userNickName = useAtomValue(readUserNickName);
 
   const navigate = useNavigate();
+
+  function pwdChangeModalHandler() {
+    pwdDialog.current.showModal();
+  }
 
   function deleteModalHanlder() {
     dialog.current.showModal();
@@ -31,17 +38,20 @@ export default function UserInformation() {
   }
   return (
     <>
+      <MyPagePwdChangeModal ref={pwdDialog} />
       <MyPageDeleteModal ref={dialog} />
       <UserData>
         <img src={icon} />
         <p className="user-name">{userNickName}</p>
       </UserData>
-      {/* <InformationBar>
+      <InformationBar>
         <div className="infobox">
           <span>비밀번호 변경 하셨어요?</span>
         </div>
-        <Link className="link">변경하기</Link>
-      </InformationBar> */}
+        <StyledButton className="deletemodal-showbutton" onClick={pwdChangeModalHandler}>
+          <p>변경하기</p>
+        </StyledButton>
+      </InformationBar>
       <InformationBar>
         <p className="text">서비스가 마음에 안드시나요?</p>
         <StyledButton className="deletemodal-showbutton" onClick={deleteModalHanlder}>

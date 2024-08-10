@@ -28,7 +28,7 @@ const IBLayout = styled.div`
       font-family: NanumSquareRound;
     }
     & span:last-child {
-      color: ${({ theme }) => theme.color.main};
+      // color: ${({ theme }) => theme.color.main};
     }
   }
   & .text {
